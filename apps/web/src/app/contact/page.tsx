@@ -22,9 +22,9 @@ export default function Page() {
     <>
       <div className="min-h-screen">
         <Navigation isNav={isOpen} />
-        <div className={isOpen ? "ml-[25%]" : "m-auto"}>
+        <div className={isOpen ? "ml-[25%]" : "m-0"}>
           <Header onToggle={() => setIsOpen(!isOpen)} />
-          <main className="px-6 py-2 max-w-6xl m-auto overflow-hidden bg-[#e6e6e6] dark:bg-[#66023c] dark:text-[#e6e6e6] text-[#363636]">
+          <main className="px-6 py-2 overflow-hidden bg-[#e6e6e6] dark:bg-[#66023c] dark:text-[#e6e6e6] text-[#363636]">
             <h1 className={robotoSlab.className}>Get in touch!</h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat,

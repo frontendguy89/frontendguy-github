@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import Image from "next/image";
 import { Roboto_Slab } from "next/font/google";
 import {
@@ -10,6 +10,7 @@ import {
   BoltIcon,
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import { CldImage } from "next-cloudinary";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -21,9 +22,29 @@ const robotoSlab = Roboto_Slab({
   weight: "700",
 });
 
+const initialMenuState = {
+  isOpen: false,
+  isClosed: true,
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "isOpen":
+      return { ...state, isOpen: false, isClosed: true };
+    case "isClosed":
+      return { ...state, isOpen: true, isClosed: false };
+    default:
+      return state;
+  }
+}
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosed, setIsClosed] = useState(true);
+
+  const [state, dispatch] = useReducer(reducer, initialMenuState);
+
+  function handleMenuClick() {}
 
   return (
     <>
@@ -33,12 +54,12 @@ export default function Home() {
           <Header onToggle={() => setIsOpen(!isOpen)} />
           <main className="px-6 py-2 max-w-6xl m-auto overflow-hidden bg-[#e6e6e6] dark:bg-[#66023c] dark:text-[#e6e6e6] text-[#363636]">
             <section className="flex flex-col text-center lg:text-left lg:flex-row gap-6 my-6 ">
-              <Image
+              <CldImage
                 alt="Profile Pic"
                 width="320"
                 height="320"
                 priority
-                src="/profile.webp"
+                src="wzxtrb8vcebw5drxxte5"
                 className="rounded-full w-[320px] h-[320px] m-auto shadow-md shadow-[#333]"
               />
               <motion.div
@@ -170,7 +191,7 @@ export default function Home() {
             </motion.div>
             <hr className="my-6" />
             <SkillBanner />
-            <section className="flex flex-col lg:flex-row gap-16">
+            <section>
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -178,29 +199,29 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 <br />
-                <section>
-                  <p className="max-w-[40rem] m-auto text-center lg:text-left">
+                <section className="py-2">
+                  <p className="m-auto">
                     I have the following skills in Frontend Development (HTML,
                     CSS, JavaScript, Tailwind, Typescript), Libraries (React,
                     React Native) Frameworks (NextJS, Remix) and Design software
                     (Figma, Adobe XD, Sketch):
                   </p>
-                  <div className="flex flex-wrap items-baseline justify-between py-6">
-                    <ul>
+                  <div className="flex flex-col lg:grid grid-cols-3">
+                    <ul className="py-6 ">
                       <li>HTML</li>
                       <li>CSS</li>
                       <li>JavaScript</li>
                       <li>Typescript</li>
                       <li>React</li>
                     </ul>
-                    <ul>
+                    <ul className="py-6">
                       <li>React Native</li>
                       <li>NextJS</li>
                       <li>Remix</li>
                       <li>WordPress</li>
                       <li>Shopify</li>
                     </ul>
-                    <ul>
+                    <ul className="py-6 ">
                       <li>TailwindCSS</li>
                       <li>Expo</li>
                       <li>Figma</li>
