@@ -84,7 +84,6 @@ a:hover {
 }
 
 .side-nav {
-  opacity:0;
   transition: opacity 0.3s ease-in-out
 }
 

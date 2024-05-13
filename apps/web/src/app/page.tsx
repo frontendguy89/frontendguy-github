@@ -23,6 +23,7 @@ const robotoSlab = Roboto_Slab({
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosed, setIsClosed] = useState(true);
 
   return (
     <>
@@ -36,8 +37,8 @@ export default function Home() {
                 alt="Profile Pic"
                 width="320"
                 height="320"
-                src="/macbook.jpg"
-                className="rounded-[50%] w-[320px] h-[320px] m-auto shadow-md shadow-[#333]"
+                src="/profile.webp"
+                className="rounded-full w-[320px] h-[320px] m-auto shadow-md shadow-[#333]"
               />
               <motion.div
                 initial={{ opacity: 0 }}
@@ -75,10 +76,12 @@ export default function Home() {
                     designer/developer or as a team member.
                   </p>
                   <p>
-                    <strong>Freelance:</strong> I love working as a freelancer
-                    as it gives me the opportunity to learn from many projects
-                    and always tackle a unique and exciting project. I get to
-                    work with clients all across the world, growing my skills.
+                    <strong>Work:</strong> I love working as a developer as it I
+                    love seeing companies, organisations and people thrive with
+                    well functioning, performant and beautiful websites. I've
+                    worded freelance for many years on multiple sites and at my
+                    own company to tailor a bespoke service to people needing a
+                    digital footprint.
                   </p>
                 </div>
               </motion.div>
@@ -121,14 +124,14 @@ export default function Home() {
                 <div>
                   <CodeBracketIcon className="size-6 text-center mx-auto" />
                   <h3 className={`text-center ${robotoSlab.className}`}>
-                    Handcrafted Development
+                    Poetic Code
                   </h3>
                   <p>
                     I don't just use the default settings on a framework and
                     call it a day, I actually work with you to create a
                     handcrafted unique web or mobile experience. Meaning with
                     me, you get a one of a kind website. From high fidelity
-                    wireframes all the way up to working live prototypes.
+                    wireframes all the way up to live sites with CI/CD.
                   </p>
                 </div>
               </section>
@@ -136,27 +139,30 @@ export default function Home() {
                 <div>
                   <DevicePhoneMobileIcon className="size-6 text-center mx-auto" />
                   <h3 className={`text-center ${robotoSlab.className}`}>
-                    Handcrafted Development
+                    Responsive All the Way
                   </h3>
                   <p>
-                    I don't just use the default settings on a framework and
-                    call it a day, I actually work with you to create a
-                    handcrafted unique web or mobile experience. Meaning with
-                    me, you get a one of a kind website. From high fidelity
-                    wireframes all the way up to working live prototypes.
+                    Most people these days access the internet on a mobile
+                    device. Don't access to potential conversions, clients and
+                    events due to a site being poorly developed for mobile or
+                    running too slow. I make sure your SEO is great, your site
+                    is accessible for those with disabilities and I make sure
+                    all my sites are mobile first responsive.
                   </p>
                 </div>
                 <div>
                   <BoltIcon className="size-6 text-center mx-auto" />
                   <h3 className={`text-center ${robotoSlab.className}`}>
-                    Handcrafted Development
+                    Lightning to the Nations
                   </h3>
                   <p>
-                    I don't just use the default settings on a framework and
-                    call it a day, I actually work with you to create a
-                    handcrafted unique web or mobile experience. Meaning with
-                    me, you get a one of a kind website. From high fidelity
-                    wireframes all the way up to working live prototypes.
+                    I extensively and obsessively monitor pagespeed and insights
+                    to ensure you'll get a great experience on a site I
+                    developed, in addition to the added benefits of great SEO
+                    when a site is well made and best practices are followed. I
+                    keep on the cutting edge of the latest frontend technologies
+                    while making sure nothing breaks on legacy browsers and
+                    frameworks.
                   </p>
                 </div>
               </section>
@@ -172,13 +178,13 @@ export default function Home() {
               >
                 <br />
                 <section>
-                  <p className="m-auto text-center lg:text-left">
+                  <p className="max-w-[40rem] m-auto text-center lg:text-left">
                     I have the following skills in Frontend Development (HTML,
                     CSS, JavaScript, Tailwind, Typescript), Libraries (React,
                     React Native) Frameworks (NextJS, Remix) and Design software
                     (Figma, Adobe XD, Sketch):
                   </p>
-                  <div className="flex flex-col lg:flex-row items-baseline justify-between py-6">
+                  <div className="flex flex-wrap items-baseline justify-between py-6">
                     <ul>
                       <li>HTML</li>
                       <li>CSS</li>
@@ -194,7 +200,11 @@ export default function Home() {
                       <li>Shopify</li>
                     </ul>
                     <ul>
-                      <li>Tailwind</li>
+                      <li>TailwindCSS</li>
+                      <li>Expo</li>
+                      <li>Figma</li>
+                      <li>GraphQL</li>
+                      <li>REST</li>
                     </ul>
                   </div>
                 </section>

@@ -11,7 +11,7 @@ const robotoSlab = Roboto_Slab({
   weight: "700",
 });
 
-export default function Header({ onToggle }: any) {
+export default function Header({ onToggle }) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -24,7 +24,7 @@ export default function Header({ onToggle }: any) {
   }
 
   return (
-    <div className="px-6 py-2 max-w-6xl m-auto flex justify-between items-center border-b border-[#666666] border-solid bg-[#66023c] dark:bg-[#47012a] text-[#e6e6e6] sticky top-0 left-0 w-full">
+    <div className="px-6 py-2 max-w-6xl m-auto flex flex-col md:flex-row justify-between items-center border-b border-[#666666] border-solid bg-[#66023c] dark:bg-[#47012a] text-[#e6e6e6] sticky top-0 left-0 w-full">
       <header>
         <Link href="/">
           <h6 className={robotoSlab.className}>@frontendguy89</h6>
