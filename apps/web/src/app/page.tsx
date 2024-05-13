@@ -37,6 +37,7 @@ export default function Home() {
                 alt="Profile Pic"
                 width="320"
                 height="320"
+                priority
                 src="/profile.webp"
                 className="rounded-full w-[320px] h-[320px] m-auto shadow-md shadow-[#333]"
               />
