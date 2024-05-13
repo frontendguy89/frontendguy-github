@@ -54,12 +54,12 @@ export default function Home() {
           <Header onToggle={() => setIsOpen(!isOpen)} />
           <main className="px-6 py-2 max-w-6xl m-auto overflow-hidden bg-[#e6e6e6] dark:bg-[#66023c] dark:text-[#e6e6e6] text-[#363636]">
             <section className="flex flex-col text-center lg:text-left lg:flex-row gap-6 my-6 ">
-              <CldImage
+              <Image
                 alt="Profile Pic"
                 width="320"
                 height="320"
                 priority
-                src="wzxtrb8vcebw5drxxte5"
+                src="/profile.webp"
                 className="rounded-full w-[320px] h-[320px] m-auto shadow-md shadow-[#333]"
               />
               <motion.div
