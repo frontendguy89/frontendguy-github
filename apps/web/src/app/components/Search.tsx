@@ -27,7 +27,7 @@ export default function Search() {
         },
       }}
     >
-      <SearchBox className="bg-white" />
+      <SearchBox placeholder="Search the site" />
     </InstantSearchNext>
   );
 }

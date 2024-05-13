@@ -34,8 +34,9 @@ export default function Page() {
             <p>This site was built using free and open source  code, files and assets.</p>
             <h2 className={robotoSlab.className}>Code:</h2>
             <p>This site was made using HTML5, CSS, JavaScript and Markdown.
-               Libraries used include React, NextJS, Tailwind, Typescript and MDX.
+               Libraries used include React, Tailwind, Typescript and MDX.
             </p>
+            <p>Frameworks used are NextJS, Algolia and Google Recaptcha</p>
           </main>
           <Footer />
         </div>
