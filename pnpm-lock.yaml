@@ -54,8 +54,11 @@ importers:
         specifier: ^11.1.9
         version: 11.1.9(react-dom@18.3.1)(react@18.3.1)
       fs:
-        specifier: ^0.0.1-security
+        specifier: 0.0.1-security
         version: 0.0.1-security
+      fs-extra:
+        specifier: ^11.2.0
+        version: 11.2.0
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
@@ -92,6 +95,9 @@ importers:
       react-spinners:
         specifier: ^0.13.8
         version: 0.13.8(react-dom@18.3.1)(react@18.3.1)
+      readdir:
+        specifier: ^1.0.2
+        version: 1.0.2
       use-debounce:
         specifier: ^10.0.0
         version: 10.0.0(react@18.3.1)
@@ -746,6 +752,18 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
+
+  /@kwsites/file-exists@1.1.1:
+    resolution: {integrity: sha512-m9/5YGR18lIwxSFDwfE3oA7bWuq9kdau6ugN4H2rJeyhFQZcG9AgSHkQtSD15a8WvTgfz9aikZMrKPHvbpqFiw==}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@kwsites/math-sum@1.0.1:
+    resolution: {integrity: sha512-Nk2Yg8SFJGgNBbVhCaO823325PXV8n5eSEl7PxacpMgeqTCUmHMIgScG2/o6JiHRoDYgq8JBvJuIU0SvRPgxxg==}
+    dev: false
 
   /@mdx-js/loader@3.0.1(webpack@5.91.0):
     resolution: {integrity: sha512-YbYUt7YyEOdFxhyuCWmLKf5vKhID/hJAojEUnheJk4D8iYVLFQw+BAoBWru/dHGch1omtmZOPstsmKPyBF68Tw==}
@@ -3751,7 +3769,6 @@ packages:
       graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.1
-    dev: true
 
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -4693,7 +4710,6 @@ packages:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
-    dev: true
 
   /jsx-ast-utils@3.3.5:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
@@ -6474,6 +6490,15 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /readdir@1.0.2:
+    resolution: {integrity: sha512-/fOSAvuHNv3IyE1/GXuz7o0d+EIwe35a0Qd/yXWs48KKas0TnxhzHVmExFmMRsWgozaCWBQ81kNyXB7uD+iYow==}
+    dependencies:
+      '@kwsites/file-exists': 1.1.1
+      '@kwsites/math-sum': 1.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
@@ -7641,7 +7666,6 @@ packages:
   /universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
-    dev: true
 
   /update-browserslist-db@1.0.15(browserslist@4.23.0):
     resolution: {integrity: sha512-K9HWH62x3/EalU1U6sjSZiylm9C8tgq2mSvshZpqc7QE69RaA2qjhkW2HlNA0tFpEbtyFz7HTqbSdN4MSwUodA==}
